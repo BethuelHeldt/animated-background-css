@@ -1,0 +1,91 @@
+/*
+2019-03-19 
+author: Bethuel Heldt
+*/
+
+body{
+   margin: 0;
+   padding: 0;
+   background:url(images/ij01.jpg) no-repeat center center;
+   background-size:cover;
+   background-attachment: fixed;
+   font-size:18px;
+}
+body, p, h1, h2{
+   font-family: Verdana, sans-serif;
+   
+}
+h1{
+   font-family: 'Major Mono Display', monospace;
+   text-align: center;
+   background-color:rgba(255,255,255,0.50);
+   background-color: rgba(0,0,0,0.50);
+   color: #FFF;
+   font-size: 2em;
+   line-height: 3em;
+   margin: 0 auto;
+   padding: 0;
+}
+footer{
+   position: fixed;
+   bottom:0;
+   width:100vw;
+   padding:0 1em;
+   line-height: 1.5em;
+   background-color: rgba(0,0,0,0.50);
+   color: #FFF;
+}
+/*
+BACKGROUND ANIMATION IMG'S
+1. Voor de backgrounds animation plaats je in de body{} al je background images na elkaar gescheiden door een komma. De img's worden dan in de cache geladen. 
+   Komma gescheiden backgrounds werkt niet in alle browsers dus er moet ook een background-image staan met slechts 1 plaatje.
+   De backgrounds animation is best zwaar voor zowel data gebruik als processor.. dus op vpn en op mobile staat dat uit.
+2. In de keyframes zet je vervolgens dezelfde images.
+*/
+body{
+   background-image: url(images/ij01.jpg);
+   background-image: url(images/ij01.jpg), url(images/ij03.jpg), url(images/ij02.jpg), url(images/ij05.jpg), url(images/ij06.jpg), url(images/ij04.jpg);
+   animation-name: backgrounds;
+   animation-duration: 20s;
+   animation-iteration-count:infinite;
+   animation-direction: normal;
+   animation-timing-function:  ease-in-out;
+   animation-fill-mode: both; 
+   animation-delay: 0s;
+}
+
+/*********************************************************************************************ANIMATIE BG*/
+
+@-webkit-keyframes backgrounds {
+   0%,15%,100%    {background-image: url(images/ij01.jpg);}
+   17%,30%        {background-image: url(images/ij02.jpg);}
+   32%,47%        {background-image: url(images/ij03.jpg);}
+   49%,64%        {background-image: url(images/ij04.jpg);}
+   66%,81%        {background-image: url(images/ij05.jpg);}
+   83%,98%        {background-image: url(images/ij06.jpg);}
+}
+@-moz-keyframes backgrounds {
+   0%,15%,100%    {background-image: url(images/ij01.jpg);}
+   17%,30%        {background-image: url(images/ij02.jpg);}
+   32%,47%        {background-image: url(images/ij03.jpg);}
+   49%,64%        {background-image: url(images/ij04.jpg);}
+   66%,81%        {background-image: url(images/ij05.jpg);}
+   83%,98%        {background-image: url(images/ij06.jpg);}
+}
+@-o-keyframes backgrounds {
+   0%,15%,100%    {background-image: url(images/ij01.jpg);}
+   17%,30%        {background-image: url(images/ij02.jpg);}
+   32%,47%        {background-image: url(images/ij03.jpg);}
+   49%,64%        {background-image: url(images/ij04.jpg);}
+   66%,81%        {background-image: url(images/ij05.jpg);}
+   83%,98%        {background-image: url(images/ij06.jpg);}
+}
+@keyframes backgrounds {
+   0%,15%,100%    {background-image: url(images/ij01.jpg);}
+   17%,30%        {background-image: url(images/ij02.jpg);}
+   32%,47%        {background-image: url(images/ij03.jpg);}
+   49%,64%        {background-image: url(images/ij04.jpg);}
+   66%,81%        {background-image: url(images/ij05.jpg);}
+   83%,98%        {background-image: url(images/ij06.jpg);}
+}
+/************************************************************************************************************/
